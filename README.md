@@ -13,6 +13,7 @@ express api that serves data gathered from [tibia-scraper](https://github.com/ra
 
 ### overview
 express api implementation that serves data gathered from [tibia-scraper](https://github.com/rafaellvs/tibia-scraper/blob/master/README.md)
+
 i used `file-generator` script to generate the database model and express routes files (models generator is the same as tibia-scraper's)
 `scraper` is used to scrape attributes from each entity on TibiaWiki pages.
 
