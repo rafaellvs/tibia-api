@@ -2,6 +2,8 @@
   "name": "tibia-api",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/rafaellvs/tibia-api.git",
+  "author": "Rafael Vieira <rafaellvs322@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.10.5",
