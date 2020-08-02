@@ -2,6 +2,7 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 import pluralize from 'pluralize'
+import 'regenerator-runtime'
 
 import { sequelize } from './models'
 
