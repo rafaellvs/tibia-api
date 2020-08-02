@@ -1,6 +1,8 @@
 # tibia-api
 express api that serves data gathered from [tibia-scraper](https://github.com/rafaellvs/tibia-scraper)
 
+deployed at https://tibia-db.herokuapp.com/
+
 ## stack
 - node
 - postgres
