@@ -5,19 +5,6 @@
   "repository": "https://github.com/rafaellvs/tibia-api.git",
   "author": "Rafael Vieira <rafaellvs322@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "dotenv": "^8.2.0",
-    "eslint": "^7.5.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "nodemon": "^2.0.4"
-  },
   "engines": {
     "node": "12.18.3"
   },
@@ -34,5 +21,18 @@
     "pg": "^8.3.0",
     "pluralize": "^8.0.0",
     "sequelize": "^6.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.4"
   }
 }
