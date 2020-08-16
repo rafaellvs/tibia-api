@@ -23,30 +23,30 @@ import mount from './Mount.js'
 import { Sequelize, DataTypes } from 'sequelize'
 
 // local connection
-export const sequelize = new Sequelize(
-  process.env.DATABASE,
-  process.env.DATABASE_USER,
-  process.env.DATABASE_PASSWORD,
-  {
-    dialect: 'postgres',
-    define: { timestamps: false },
-  }
-)
-
-// deployed connection
-// export const sequelize = new Sequelize(process.env.DATABASE_URL,
+// export const sequelize = new Sequelize(
+//   process.env.DATABASE,
+//   process.env.DATABASE_USER,
+//   process.env.DATABASE_PASSWORD,
 //   {
 //     dialect: 'postgres',
-//     protocol: 'postgres',
 //     define: { timestamps: false },
-//     dialectOptions: {
-//       ssl: {
-//         require: true,
-//         rejectUnauthorized: false,
-//       },
-//     },
 //   }
 // )
+
+// deployed connection
+export const sequelize = new Sequelize(process.env.DATABASE_URL,
+  {
+    dialect: 'postgres',
+    protocol: 'postgres',
+    define: { timestamps: false },
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
+  }
+)
 
 const models = {
   Creature: creature(sequelize, DataTypes),
