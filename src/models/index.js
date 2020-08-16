@@ -17,22 +17,36 @@ import boots from './Boots.js'
 import amulet from './Amulet.js'
 import ring from './Ring.js'
 import lightsource from './LightSource.js'
+import spell from './Spell.js'
+import mount from './Mount.js'
 
 import { Sequelize, DataTypes } from 'sequelize'
 
-export const sequelize = new Sequelize(process.env.DATABASE_URL,
+// local connection
+export const sequelize = new Sequelize(
+  process.env.DATABASE,
+  process.env.DATABASE_USER,
+  process.env.DATABASE_PASSWORD,
   {
     dialect: 'postgres',
-    protocol: 'postgres',
     define: { timestamps: false },
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
-    },
   }
 )
+
+// deployed connection
+// export const sequelize = new Sequelize(process.env.DATABASE_URL,
+//   {
+//     dialect: 'postgres',
+//     protocol: 'postgres',
+//     define: { timestamps: false },
+//     dialectOptions: {
+//       ssl: {
+//         require: true,
+//         rejectUnauthorized: false,
+//       },
+//     },
+//   }
+// )
 
 const models = {
   Creature: creature(sequelize, DataTypes),
@@ -53,6 +67,8 @@ const models = {
   Amulet: amulet(sequelize, DataTypes),
   Ring: ring(sequelize, DataTypes),
   LightSource: lightsource(sequelize, DataTypes),
+  Spell: spell(sequelize, DataTypes),
+  Mount: mount(sequelize, DataTypes),
 
 }
 
