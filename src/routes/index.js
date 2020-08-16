@@ -17,6 +17,8 @@ import boots from './boots'
 import amulets from './amulets'
 import rings from './rings'
 import lightsources from './lightsources'
+import spells from './spells'
+import mounts from './mounts'
 
 export default [
   creatures,
@@ -37,5 +39,7 @@ export default [
   amulets,
   rings,
   lightsources,
+  spells,
+  mounts,
 
 ]
