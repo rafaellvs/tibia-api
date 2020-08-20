@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-import scrapeAttributes from '../../scraper/scrape-attributes'
+import scrapeAttributes from '../../scraper/attributes'
 import { model, index } from './code-templates'
 import entities from '../../entities'
 
@@ -12,7 +12,9 @@ const createModel = async (name, url) => {
   fs.writeFile(
     fileName,
     code,
-    err => err ? console.log(err) : console.log(`File ${fileName} created.`)
+    err => err
+      ? console.log(err)
+      : console.log(`File ${fileName} created.`)
   )
 }
 
