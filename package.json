@@ -5,15 +5,11 @@
   "repository": "https://github.com/rafaellvs/tibia-api.git",
   "author": "Rafael Vieira <rafaellvs322@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "node": "12.18.3"
-  },
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./src -s",
     "build": "yarn run clean && yarn run build-babel",
     "start": "yarn run build && node ./build/index.js",
-    "generate:models": "babel-node src/file-generator/models/index.js && eslint --fix src/models/*",
     "generate:routes": "babel-node src/file-generator/routes/index.js && eslint --fix src/routes/*"
   },
   "dependencies": {
