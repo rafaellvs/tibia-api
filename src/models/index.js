@@ -18,9 +18,9 @@ import amulet from './Amulet.js'
 import ring from './Ring.js'
 import lightsource from './LightSource.js'
 import spell from './Spell.js'
-import mount from './Mount.js'
 
-import { Sequelize, DataTypes } from 'sequelize'
+import sequelizePKG from 'sequelize'
+const { Sequelize, DataTypes } = sequelizePKG
 
 // local connection
 export const sequelize = new Sequelize(
@@ -39,6 +39,9 @@ export const sequelize = new Sequelize(
 //     dialect: 'postgres',
 //     protocol: 'postgres',
 //     define: { timestamps: false },
+//     pool: {
+//       max: 20,
+//     },
 //     dialectOptions: {
 //       ssl: {
 //         require: true,
@@ -68,7 +71,6 @@ const models = {
   Ring: ring(sequelize, DataTypes),
   LightSource: lightsource(sequelize, DataTypes),
   Spell: spell(sequelize, DataTypes),
-  Mount: mount(sequelize, DataTypes),
 
 }
 
