@@ -75,10 +75,6 @@ const entities = [
     name: 'Spell',
     url: 'Spells',
   },
-  {
-    name: 'Mount',
-    url: 'Mounts',
-  },
 ]
 
 export default entities
