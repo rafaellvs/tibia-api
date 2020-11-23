@@ -21,6 +21,7 @@ entities.map((entity, index) =>
     routes[index]
   )
 )
+
 sequelize.sync().then(() => {
   app.listen(
     process.env.PORT,
