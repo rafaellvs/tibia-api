@@ -1,19 +1,21 @@
 import fs from 'fs'
 import pluralize from 'pluralize'
 
-import { formatAttribute } from '../../helpers/utils'
-
-import { route, index } from './code-templates'
 import entities from '../../entities'
 
+import indexModel from './templates/index'
+import routeModel from './templates/route'
+
 const createFile = name => {
-  const fileName = `src/routes/${pluralize(formatAttribute(name))}.js`
-  const code = route(name)
+  const fileName = `src/routes/${pluralize(name.toLowerCase())}.js`
+  const code = routeModel(name)
 
   fs.writeFile(
     fileName,
     code,
-    err => err ? console.log(err) : console.log(`File ${fileName} created.`)
+    err => err
+      ? console.log(err)
+      : console.log(`File ${fileName} created.`)
   )
 }
 
@@ -30,7 +32,7 @@ const createFiles = () => {
   )
 
   // create index
-  const code = index(entities)
+  const code = indexModel(entities)
   fs.writeFile(
     'src/routes/index.js',
     code,
